@@ -5,14 +5,67 @@
 }
 
 .game-board{
-  width: 80%;  
+  width: 800px;  
   height: 500px;
   border: 1px solid #333;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .cuphead{
     position: absolute;
     bottom: 0;
+    width: 230px;
+  }
+  
+  .pular{
+    animation: jump 800ms ease-out;
+    
+}
+
+.obstaculo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: animacao-obstaculo 1.5s infinite linear;
+}
+
+.nuvem{
+    position: absolute;
+    width: 622px;
+    animation: animacao-nuvem 10.0s infinite linear;
+
+}
+
+@keyframes jump {
+    0%{
+      bottom: 0;
+    }
+    40%{
+      bottom: 200px;
+    }
+    100%{
+      bottom: 0;
+    }
+
+}
+
+@keyframes animacao-obstaculo {
+    from{
+      right: -80px;
+    }
+    to{
+      right: 800px;
+    }
+  
+}
+
+@keyframes animacao-nuvem {
+    from{
+      right: -622px;
+    }
+    to{
+      right: 800px;
+    }
 }
