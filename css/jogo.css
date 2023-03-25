@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.game-board{
+.game-board{ 
   width: 800px;  
   height: 500px;
   border: 1px solid #333;
@@ -16,7 +16,7 @@
 .cuphead{
     position: absolute;
     bottom: 0;
-    width: 230px;
+    width: 130px;
   }
   
   .pular{
@@ -35,6 +35,17 @@
     position: absolute;
     width: 622px;
     animation: animacao-nuvem 10.0s infinite linear;
+
+}
+
+.gameOver{
+  margin-left: 17%;
+  width: 500px;
+  position: absolute;
+}
+
+.apagar{
+ opacity: 0;
 
 }
 
