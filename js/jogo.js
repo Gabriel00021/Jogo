@@ -12,19 +12,23 @@ const pulo = ()=>{
 const loop = setInterval(() => {
     const obstaculoPosition = obstaculo.offsetLeft;
     const cupheadPosition = +window.getComputedStyle(cuphead).bottom.replace('px', '')
-
+    gameOver.classList.add('apagar')
     console.log(cupheadPosition)
     if(obstaculoPosition <= 100 && obstaculoPosition > 0 && cupheadPosition <= 100){
 
-        obstaculo.style.animation = 'none'
+        obstaculo.style.animation = 'none';
         obstaculo.style.left = `${obstaculoPosition}px`;
     
-        cuphead.style.anymation = 'none'
-        cuphead.style.left = `${cupheadPosition}px`
+        cuphead.style.anymation = 'none';
+        cuphead.style.left = `${cupheadPosition}px`;
 
-       // gameOver.classList.remove(".apagar");
+        gameOver.classList.remove('apagar')
 
         clearInterval(loop);
+        setInterval(() => {
+            
+            window.location.reload(true)
+        }, 4000);
     }
 }, 10);
 
